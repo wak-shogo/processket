@@ -8,6 +8,17 @@ st.title("Processket")
 
 st.write("Suggest parameter for next experiment based on past results")
 
+
+# Add a section to download the sample .xlsx file
+st.markdown("#### Download sample .xlsx file")
+with open("template_jp.xlsx", "rb") as file:
+    st.download_button(
+        label="Download sample .xlsx",
+        data=file,
+        file_name="template_jp.xlsx",
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
+    
 st.markdown("#### Upload data")
 
 uploaded_file = st.file_uploader("",type=["xlsx"])
